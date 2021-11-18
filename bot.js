@@ -15,5 +15,8 @@ client.on('ready', () => {
 // 		await interaction.reply('Pong!');
 // 	}
 // });
+client.on('messageCreate', (msg) => {
+	msg.content === 'ping' && msg.reply('howfar na');
+});
 
 client.login(process.env.DISCORD_TOKEN);
